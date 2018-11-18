@@ -3,7 +3,7 @@
 ## AS-PATH
 
 R4
-![](2018-11-18-10-32-17.png)
+![](https://t1.picb.cc/uploads/2018/11/18/JXUTqF.png)
 
     ip as-path access-list 1 deny _200$
     ip as-path access-list 1 permit .*
@@ -23,7 +23,7 @@ R4
 
 ## community
 
-![](2018-11-18-10-32-17.png)
+![](https://t1.picb.cc/uploads/2018/11/18/JXUTqF.png)
 
 在R1上为100.100.100.0的路由打上community标记100:1，前面的100是as号，后面的是自定义的路由器编号
 
