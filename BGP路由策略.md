@@ -72,3 +72,25 @@ R4
         neighbor 192.168.34.4 remote-as 400
         neighbor 192.168.34.4 route-map wei1 out
 
+在R2上设置策略让R4学不到关于100.100.100.0的路由
+
+    R2:
+    access-list 1 permit 100.100.100.0
+    route-map comm permit
+    match ip address 1
+    match community 100:1
+    set community local-AS additive
+    exit
+    route-map comm permit 20
+    router bgp 200
+    nei 192.168.23.3 route-map comm out
+    clear ip bgp * so
+
+但是R3偏偏要告诉R4关于100.100.100.0的路由
+
+    R3：
+    access-list 2 permit 100.100.100.0
+    ip community-list 2 permit local-as 
+    route-map wei1 per 10
+    match ip add 2
+    set comm-list 2 delete
