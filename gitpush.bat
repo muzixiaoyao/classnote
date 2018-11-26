@@ -1,3 +1,4 @@
+@echo off
 git add -A .
 set /p declation="input commit:"
 git commit -m "%declation%"
