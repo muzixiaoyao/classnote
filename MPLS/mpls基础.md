@@ -86,3 +86,40 @@ CEF不仅仅是将数据都存入system buffer，而是将整个路由表、拓�
     - 中间LSR
 - A Lalel Switching Path（LSP）
   - LSP是报文在穿越mpls网络或部分mpls网络时的LSR序列
+  
+## 简单mpls部署
+
+```route cmd
+R1
+R1(config)#ip cef
+R1(config)#mpls ldp route-id lo0
+R1(config)#mpls label range 100 199
+R1(config)#int e0/0
+R1(config-if)#mpls ip
+
+R1
+R1(config)#ip cef
+R1(config)#mpls ldp route-id lo0
+R1(config)#mpls label range 200 299
+R1(config)#int ra e0/0 -1
+R1(config-if)#mpls ip
+```
+
+查看标签数据库
+
+```route cmd
+R1#show mpls ldp bindings
+```
+
+查看LFIB表
+
+```route cmd
+R1#show mpls forwarding-table
+```
+
+查看邻居发现情况
+
+```route cmd
+R1#show mpls ldp discovery
+```
+
