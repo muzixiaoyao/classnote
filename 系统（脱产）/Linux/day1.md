@@ -12,7 +12,7 @@
 # mount -o remount,rw
 # chroot /sysroot
 # passwd root   # 在这行进行密码修改，救援模式的作用不仅仅是修改密码，如果linux出问题无法开机，也可以进入救援模式进行修复，只要把这一步替换掉即可，注意，其他步骤不能改变
-# touch /.aoturelabel
+# touch /.autorelabel
 # exit
 # exit
 # 等待重启进入系统中，这时候，root用户或者指定用户的密码就已经被修改成功了
