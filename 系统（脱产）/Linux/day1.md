@@ -53,7 +53,7 @@ yum是为了解决rpm安装软件不方便设置的网络软件仓库，/etc/yum
 安装一个预置环境
     # yum groupinstall [预置环境组名]
 列出所有可安装预置环境
-    # yum gourp list
+    # yum group list
 检查是否有可用的软件包更新
     # yum check-update
 更新系统中的一个或多个软件包
@@ -64,4 +64,25 @@ yum是为了解决rpm安装软件不方便设置的网络软件仓库，/etc/yum
     # yum clean all
 更新yum缓存
     # yum makecache
+```
+
+## 系统安装完之后必装的一些软件
+
+```shell
+    # yum -y install vim wget lrzsz unzip bash-completion net-tools bind-utils zip git screen  
+```
+## 系统安装完之后实验环境中要做的一些事
+
+永久性关闭防火墙  
+
+```shell
+    # systemctl stop firewalld  
+    # systemctl disable firewalld  
+```
+
+关闭selinux  
+
+```shell
+    # setenforce 0
+    # sed -i 's/SELINUX=enforcing/SELINUX=disabled/g'/etc/sysconfig/selinux
 ```
