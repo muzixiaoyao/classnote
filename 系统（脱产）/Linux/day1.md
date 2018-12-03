@@ -25,13 +25,13 @@ rpm是在红帽以及centos系统本地安装软件使用的命令，将需要�
 
 ```shell
 安装软件  
-    # rpm -ivh [软件包]  
+# rpm -ivh [软件包]  
 查询软件  
-    # rpm -qa | grep [软件名]  
+# rpm -qa | grep [软件名]  
 升级软件
-    # rpm -Uvh [软件包]  
+# rpm -Uvh [软件包]  
 卸载软件  
-    # rpm -e [软件包]  
+# rpm -e [软件包]  
 ```
 
 ## yum仓库的使用
@@ -42,47 +42,47 @@ yum是为了解决rpm安装软件不方便设置的网络软件仓库，/etc/yum
 
 ```shell
 安装软件  
-    # yum install [软件名]  
+# yum install [软件名]  
 列出所有可安装软件(通常配合管道符grep使用)  
-    # yum list  
-    # yum list | grep zsh  
+# yum list  
+# yum list | grep zsh  
 软件重新安装  
-    # yum reinstall [软件名]  
+# yum reinstall [软件名]  
 卸载软件  
-    # yum remove [软件名]  
+# yum remove [软件名]  
 安装一个预置环境  
-    # yum groupinstall [预置环境组名]  
+# yum groupinstall [预置环境组名]  
 列出所有可安装预置环境  
-    # yum group list  
+# yum group list  
 检查是否有可用的软件包更新  
-    # yum check-update  
+# yum check-update  
 更新系统中的一个或多个软件包  
-    # yum update
+# yum update
 更新软件包同时考虑软件包取代关系  
-    # yum upgrade  
+# yum upgrade  
 清除yum缓存  
-    # yum clean all  
+# yum clean all  
 更新yum缓存  
-    # yum makecache  
+# yum makecache  
 ```
 
 ## 系统安装完之后必装的一些软件
 
 ```shell
-    # yum -y install vim wget lrzsz unzip bash-completion net-tools bind-utils zip git screen  
+# yum -y install vim wget lrzsz unzip bash-completion net-tools bind-utils zip git screen  
 ```
 ## 系统安装完之后实验环境中要做的一些事
 
 永久性关闭防火墙  
 
 ```shell
-    # systemctl stop firewalld  
-    # systemctl disable firewalld 
+# systemctl stop firewalld  
+# systemctl disable firewalld  
 ```
 
 关闭selinux  
 
 ```shell
-    # setenforce 0  
-    # sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux  
+# setenforce 0  
+# sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux  
 ```
