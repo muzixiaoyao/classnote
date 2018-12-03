@@ -123,3 +123,5 @@ R1#show mpls forwarding-table
 R1#show mpls ldp discovery
 ```
 
+## MPLS解决BGP路由黑洞问题探讨：
+mpls不会为bgp的路由前缀分发标签，但会为bgp路由递归查询的下一跳分发标签
