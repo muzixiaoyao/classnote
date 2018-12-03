@@ -17,3 +17,51 @@
 # exit
 # 等待重启进入系统中，这时候，root用户或者指定用户的密码就已经被修改成功了
 ```
+
+## rpm操作
+
+rpm是在红帽以及centos系统本地安装软件使用的命令，将需要安装的软件下载到红帽系统本地，然后安装。  
+命令格式：  
+
+```shell
+安装软件  
+    # rpm -ivh [软件包]  
+查询软件  
+    # rpm -qa | grep [软件名]  
+升级软件
+    # rpm -Uvh [软件包]  
+卸载软件  
+    # rpm -e [软件包]  
+```
+
+## yum仓库的使用
+
+yum是为了解决rpm安装软件不方便设置的网络软件仓库，/etc/yum.repos.d/目录中预先设置了网络仓库，从centos7开始，下载仓库会自动替换为离IP最近的，最好用的仓库作为默认仓库，我们用yum安装软件，就是从默认仓库中下载好软件，并且yum会为我们将软件的依赖问题解决好。  
+
+命令格式：  
+
+```shell
+安装软件  
+    # yum install [软件名]
+列出所有可安装软件(通常配合管道符grep使用)
+    # yum list
+    # yum list | grep zsh
+软件重新安装
+    # yum reinstall [软件名]
+卸载软件
+    # yum remove [软件名]
+安装一个预置环境
+    # yum groupinstall [预置环境组名]
+列出所有可安装预置环境
+    # yum gourp list
+检查是否有可用的软件包更新
+    # yum check-update
+更新系统中的一个或多个软件包
+    # yum update
+更新软件包同时考虑软件包取代关系
+    # yum upgrade
+清除yum缓存
+    # yum clean all
+更新yum缓存
+    # yum makecache
+```
