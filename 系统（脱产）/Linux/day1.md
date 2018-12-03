@@ -9,7 +9,7 @@
 **3.1** 开机在grub引导界面，将光标定位到第一行的情况下（默认光标就在第一行）按下e键进去grub编辑界面，用方向键定位到linux16开头的行的行尾，一直删除到ro后面，ro和后面的空格要保留，在ro后的空格后面添加rd.break，按下键盘上的ctrl+x快捷键进入救援模式，进入救援模式后，用以下命令进行密码修改  
 
 ```shell
-# mount -o remount,rw
+# mount -o remount,rw /sysroot
 # chroot /sysroot
 # passwd root   # 在这行进行密码修改，救援模式的作用不仅仅是修改密码，如果linux出问题无法开机，也可以进入救援模式进行修复，只要把这一步替换掉即可，注意，其他步骤不能改变
 # touch /.autorelabel
