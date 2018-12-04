@@ -318,7 +318,7 @@ anaconda-ks.cfg  QQ9.0.8.24199.exe  wget-log
 
 ### cat
 
-cat命令用于查看纯文本文件（内容较少的），格式为“cat [选项] [文件]”。
+cat命令用于查看纯文本文件（内容较少的），格式为“cat [选项] [文件]”。  
 
 ```shell
 [root@localhost ~]# echo "helloworld" > hello.txt
@@ -328,7 +328,62 @@ helloworld
 
 ### more
 
-more命令用于查看纯文本文件（内容较多的），格式为“more [选项]文件”。
+more命令用于查看纯文本文件（内容较多的），格式为“more [选项]文件”。  
 
-用法和cat一样，空格翻页，回车换行，q退出
+用法和cat一样，空格翻页，回车换行，q退出  
+
+### tail
+
+tail命令普通用法和more几乎一样，但加上-f参数可以动态追踪文件，是查看日志文件的不二之选，可以直接使用命令tailf  
+
+```shell
+动态追踪系统日志消息
+[root@localhost ~]# tailf /var/log/messages
+```
+
+### wc
+
+wc命令用于统计指定文本的行数、字数、字节数，格式为“wc [参数] 文本”  
+
+```shell
+统计当前系统中有多少个用户
+[root@localhost ~]# wc -l /etc/passwd
+21 /etc/passwd
+```
+
+wc的常用参数  
+参数|作用
+--|--
+-l|显示行数
+-w|显示单词数
+-c|显示字节数
+
+### stat
+
+stat命令用于查看文件的具体存储信息和时间等信息，格式为“stat 文件名称”  
+
+```shell
+[root@localhost ~]# stat anaconda-ks.cfg  
+  文件："anaconda-ks.cfg"
+  大小：1445      	块：8          IO 块：4096   普通文件
+设备：fd00h/64768d	Inode：8409154     硬链接：1
+权限：(0600/-rw-------)  Uid：(    0/    root)   Gid：(    0/    root)
+环境：system_u:object_r:admin_home_t:s0
+最近访问：2018-12-04 11:17:04.865759254 +0800
+最近更改：2018-12-03 10:35:30.535305453 +0800
+最近改动：2018-12-03 10:35:30.535305453 +0800
+创建时间：-
+```
+
+### diff
+
+diff命令用于比较多个文本文件的差异，格式为“diff [参数] 文件”
+
+```shell
+判断文件是否相同
+[root@localhost ~]# diff --brief diff_A.txt diff_B.txt 
+文件 diff_A.txt 和 diff_B.txt 不同
+```
+
+如果没有输出结果那么两个文件输出内容相同，如果有内容输出那就是两个文件内容有不同的地方
 
