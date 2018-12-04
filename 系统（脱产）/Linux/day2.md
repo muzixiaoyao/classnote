@@ -162,3 +162,80 @@ free用于显示当前系统中内存的使用量信息，格式为“free [-h]�
 Mem:           1.8G        118M        1.1G        8.7M        611M        1.5G
 Swap:          1.0G          0B        1.0G
 ```
+
+### who
+
+who用于查看当前登入主机的用户终端信息，格式为“who [参数]”。  
+
+```shell
+[root@localhost ~]# who
+root     tty1         2018-12-04 09:15
+root     pts/1        2018-12-04 10:58 (192.168.225.1)
+[root@localhost ~]#  
+```
+
+### last
+
+last命令用于查看所有系统的登录记录，格式为“last [参数]”。  
+
+```shell
+[root@localhost ~]# last
+root     pts/1        192.168.225.1    Tue Dec  4 10:58   still logged in   
+root     pts/0        192.168.225.1    Tue Dec  4 10:36 - 11:01  (00:25)    
+root     pts/0        192.168.225.1    Tue Dec  4 10:35 - 10:36  (00:00)    
+root     pts/0        192.168.225.1    Tue Dec  4 10:35 - 10:35  (00:00)    
+root     pts/0        192.168.225.1    Tue Dec  4 10:33 - 10:35  (00:02)    
+root     pts/0        192.168.225.1    Tue Dec  4 10:30 - 10:33  (00:02)    
+root     pts/0        192.168.225.1    Tue Dec  4 10:30 - 10:30  (00:00)    
+root     pts/2        192.168.225.1    Tue Dec  4 10:29 - 10:33  (00:03)    
+root     pts/1        192.168.225.1    Tue Dec  4 10:29 - 10:33  (00:03)    
+root     pts/2        192.168.225.1    Tue Dec  4 10:28 - 10:29  (00:01)    
+root     pts/1        192.168.225.1    Tue Dec  4 10:28 - 10:29  (00:01)    
+root     pts/0        192.168.225.1    Tue Dec  4 10:24 - 10:30  (00:05)    
+root     pts/1        192.168.225.1    Tue Dec  4 10:18 - 10:28  (00:10)    
+root     pts/0        192.168.225.1    Tue Dec  4 09:43 - 10:23  (00:39)    
+root     pts/2        192.168.225.1    Tue Dec  4 09:23 - 09:41  (00:17)    
+root     pts/2        192.168.225.1    Tue Dec  4 09:22 - 09:23  (00:00)    
+root     pts/3        192.168.225.1    Tue Dec  4 09:17 - 09:17  (00:00)    
+root     pts/2        192.168.225.1    Tue Dec  4 09:17 - 09:22  (00:05)    
+root     pts/1        192.168.225.1    Tue Dec  4 09:16 - 09:41  (00:24)    
+root     pts/0        192.168.225.1    Tue Dec  4 09:15 - 09:41  (00:25)    
+root     tty1                          Tue Dec  4 09:15   still logged in   
+reboot   system boot  3.10.0-693.el7.x Tue Dec  4 09:15 - 11:04  (01:49)    
+root     tty1                          Mon Dec  3 10:36 - crash  (22:38)    
+reboot   system boot  3.10.0-693.el7.x Mon Dec  3 10:36 - 11:04 (1+00:28)   
+
+wtmp begins Mon Dec  3 10:36:08 2018
+```
+
+### history
+
+history命令用于显示历史执行过的命令，最多一千条，格式为“history [-c]”。
+
+```shell
+[root@localhost ~]# history  
+    1  cd /mnt/
+    2  ls
+    3  cd /dev
+    4  ls
+	.
+	.
+	.
+```
+
+我们可以用感叹号后面跟一个数字的方式去执行历史命令中的某一条执行过的命令,例如!9,我们就可以去执行历史命令中索引为9的命令。  
+
+还有一种方式，比如我们最近敲过"systemctl restart sshd"这条命令，如果这条命令之后没有s开头的命令那我们就可以用"!s"去执行这条命令，如果有"s"开头的但不是"sy"开头的，那我们可以用"!sy"去执行这条命令。
+
+### sosreport
+
+sosreport命令用于收集系统配置及架构信息并输出诊断文档，格式为sosreport。  
+
+```shell
+最小化安装centos中默认没有这个组件，用yum安装
+[root@localhost ~]# yum install sos -y
+[root@localhost ~]# sosreport
+注意，敲过这条命令还会提示让你把报告保存到指定位置，如果不指定位置，那默认位置就是/var/tmp/中
+```
+
+## 工作目录切换命令
