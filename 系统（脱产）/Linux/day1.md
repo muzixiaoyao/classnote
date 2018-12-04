@@ -71,6 +71,7 @@ yum是为了解决rpm安装软件不方便设置的网络软件仓库，/etc/yum
 ```shell
 # yum -y install vim wget lrzsz unzip bash-completion net-tools bind-utils zip git screen  
 ```
+
 ## 系统安装完之后实验环境中要做的一些事
 
 永久性关闭防火墙  

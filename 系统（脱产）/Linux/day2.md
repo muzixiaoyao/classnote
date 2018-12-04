@@ -1,0 +1,164 @@
+# Linux新手必知必会的一些命令
+
+## 常用系统工作命令
+
+### echo
+
+echo命令用于在终端输出字符串或变量提取后的值，格式为“echo [字符串 | $变量]”。  
+
+```shell
+[root@localhost ~]# echo "hello eagle"
+hello eagle
+[root@localhost ~]# echo hello eagle
+hello eagle
+输出环境变量SHELL的值
+[root@localhost ~]# echo $SHELL
+/bin/bash
+[root@localhost ~]# i=10
+输出自定义变量i的值
+[root@localhost ~]# echo $i
+10
+```
+
+### date
+
+date命令用户显示和设置系统日期或者格式  
+
+```shell
+[root@localhost ~]# date
+2018年 12月 04日 星期二 09:46:39 CST
+按照“年-月-日 小时:分钟:秒”的格式查看当前系统时间的date命令：
+[root@localhost ~]# date "+%Y-%m-%d %H:%M:%S"
+将系统的当前时间设置为1996年10月1日1点1分的date命令：
+[root@localhost ~]# date -s "19961001 1:01:00"
+2018-12-04 09:48:46
+```
+
+将时间同步回来  
+
+```shell
+# yum install ntp
+# ntpdate ntp.api.bz
+```
+
+### wget
+
+wget命令用于在终端中下载网络文件，格式为“wget [参数] 下载地址”。  
+
+参数 | 作用
+--|--
+-b | 后台下载模式
+-P | 下载到指定的目录
+-t | 最大尝试次数
+-c | 断点续传
+-p | 下载页面内所有资源，包括图片、视频等
+-r | 递归下载
+-O | 另存为  
+
+```shell
+将文件下载到当前目录下  
+[root@localhost ~]# wget https://dldir1.qq.com/qqfile/qq/QQ9.0.8/24199/QQ9.0.8.24199.exe  
+将文件下载到指定目录并且指定文件名  
+例如将QQ下载到/tmp目录下并且重命名为QQ.exe  
+[root@localhost ~]# wget   https://dldir1.qq.com/qqfile/qq/QQ9.0.8/24199/QQ9.0.8.24199.exe -O /tmp/QQ.exe  
+```
+
+### ps
+
+ps命令用于查看系统中的进程状态，格式为“ps [参数]”。
+
+参数|作用
+-|-
+-a|显示所有进程
+-u|用户以及其他详细信息
+-x|显示没有控制终端的进程
+
+常用ps命令组合：
+
+```shell
+[root@localhost ~]# ps –aux
+[root@localhost ~]# ps –ef
+```
+
+PS： 在Linux系统中，有5种常见的进程状态，分别为运行(R)、中断(S)、不可中断(D)、僵死(Z)与停止(T)
+
+### top
+
+top命令用于动态地监视进程活动与系统负载等信息，其格式为top。能够动态地查看系统运维状态，完全将它看作Linux中的“强化版的Windows任务管理器”。  
+
+第1行：系统时间、运行时间、登录终端数、系统负载（三个数值分别为1分钟、5分钟、15分钟内的平均值，数值越小意味着负载越低）。  
+第2行：进程总数、运行中的进程数、睡眠中的进程数、停止的进程数、僵死的进程数。  
+第3行：用户占用资源百分比、系统内核占用资源百分比、改变过优先级的进程资源百分比、空闲的资源百分比等。  
+第4行：物理内存总量、内存使用量、内存空闲量、作为内核缓存的内存量。  
+第5行：虚拟内存总量、虚拟内存使用量、虚拟内存空闲量、已被提前加载的内存量。  
+
+### pidof
+
+pidof命令用于查询某个指定服务进程的PID值，格式为“pidof [参数] [服务名称]”。  
+
+每个进程的进程号码值（PID）是唯一的，因此可以通过PID来区分不同的进程。例如，可以使用如下命令来查询本机上sshd服务程序的PID：  
+
+```shell
+[root@localhost ~]# pidof sshd
+12170 12169
+```
+
+### kill
+kill命令用于终止某个指定PID的服务进程，格式为“kill [参数] [进程PID]”。  
+
+接下来，我们使用kill命令把上面用pidof命令查询到的PID所代表的进程终止掉，其命令如下所示。这种操作的效果等同于强制停止sshd服务。  
+
+```shell
+杀死一个进程
+[root@localhost ~]# kill [pid]
+[root@localhost ~]# kill 12170
+杀死一个进程树
+[root@localhost ~]# kill -9 [pid]
+```
+
+### killall
+
+killall命令用于终止某个指定名称的服务所对应的全部进程，格式为：“killall [参数] [服务名称]”。  
+
+通常来讲，复杂软件的服务程序会有多个进程协同为用户提供服务，如果逐个去结束这些进程会比较麻烦，此时可以使用killall命令来批量结束某个服务程序带有的全部进程。  
+
+```shell
+最小化安装的centos中默认没有这个组件，要手动安装
+[root@localhost ~]# yum install psmisc
+杀死sshd
+[root@localhost ~]# killall sshd
+```
+
+## 系统状态检测命令
+
+### ifconfig
+
+ifconfig命令用于获取网卡配置与网络状态等信息，格式为“ifconfig [网络设备] [参数]”。  
+
+```shell
+不加任何参数默认输出所有网卡的状态信息  
+查看指定网卡信息，将网卡设备名作用参书写在后面
+[root@localhost ~]# ifconfig ens33
+ifconfig命令还可以用来临时修改网卡的ip地址
+[root@localhost ~]# ifconfig ens33 192.168.225.101 netmask 255.255.255.0
+```
+
+### uname
+
+uname命令用于查看系统内核与系统版本等信息，格式为“uname [-a]”。  
+
+```shell
+[root@localhost ~]# uname -a
+Linux localhost.localdomain 3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux
+```
+
+### free
+
+free用于显示当前系统中内存的使用量信息，格式为“free [-h]”。  
+
+```shell
+[root@localhost ~]# free -h
+              total        used        free      shared  buff/cache   available
+Mem:           1.8G        118M        1.1G        8.7M        611M        1.5G
+Swap:          1.0G          0B        1.0G
+```
