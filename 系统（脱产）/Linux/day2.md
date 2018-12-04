@@ -235,7 +235,100 @@ sosreport命令用于收集系统配置及架构信息并输出诊断文档，�
 最小化安装centos中默认没有这个组件，用yum安装
 [root@localhost ~]# yum install sos -y
 [root@localhost ~]# sosreport
-注意，敲过这条命令还会提示让你把报告保存到指定位置，如果不指定位置，那默认位置就是/var/tmp/中
+注意，敲过这条命令还会提示让你把报告保存到指定位置，如果不指定位置，那默认位置就是/var/tmp/中  
 ```
 
 ## 工作目录切换命令
+
+linux系统目录
+![linux系统目录](https://s1.ax1x.com/2018/12/04/FQYXtg.jpg)  
+
+### pwd
+
+pwd命令用于显示用户当前所处的工作目录，格式为“pwd [选项]”。  
+
+```shell
+[root@localhost ~]# pwd
+/root
+```
+
+### cd
+
+cd命令用于切换工作路径，格式为“cd [目录名称]”。  
+
+```shell
+回到家目录的两种方法：  
+[root@localhost ~]# cd
+[root@localhost ~]# cd ~
+
+回到切换目录之前的目录  
+[root@localhost ~]# cd -
+```
+
+在路径中，一个英文句号代表当前目录，两个英文句号代表上级目录
+绝对路径：能详细描述一个目录的位置，无论当前工作目录在哪里都能通过绝对路径切换到指定目录
+相对路径：相对于当前工作目录所在的路径，切换了当前所在目录后，相对路径也会改变
+
+```shell
+进入当前目录
+[root@localhost ~]# cd .
+
+进入上级目录
+[root@localhost ~]# cd ..
+
+进入上上级目录
+[root@localhost ~]# cd ../..
+
+英文句号在切换相对路径中的应用
+从"/usr/share/locale"目录切换到"/usr/local/bin"目录，使用相对路径切换
+[root@localhost ~]# cd /usr/share/locale/
+[root@localhost locale]# pwd
+/usr/share/locale
+[root@localhost locale]# cd ../../local/bin/
+[root@localhost bin]# pwd
+/usr/local/bin
+[root@localhost bin]# cd ../../local/bin/../../local/bin/
+[root@localhost bin]# pwd
+/usr/local/bin
+```
+
+### ls
+
+ls命令用于显示目录中的文件信息，格式为“ls [选项] [文件] ”。  
+我们通常会使用ls -l查看目录中文件的详细信息，centos默认帮我们设置好了"ls -l"的别名"ll"，我们一般会加上-h的参数自动改变文件大小的单位  
+
+```shell
+[root@localhost ~]# ls
+anaconda-ks.cfg  QQ9.0.8.24199.exe  wget-log
+
+[root@localhost ~]# ll -h
+总用量 73M
+-rw-------. 1 root root 1.5K 12月  3 10:35 anaconda-ks.cfg
+-rw-r--r--. 1 root root  73M 11月 29 11:16 QQ9.0.8.24199.exe
+-rw-r--r--. 1 root root 111K 12月  4 10:01 wget-log
+
+查看当前目录下的隐藏文件
+[root@localhost ~]# ls -a
+.   anaconda-ks.cfg  .bash_logout   .bashrc  hello.txt          .tcshrc   wget-log
+..  .bash_history    .bash_profile  .cshrc   QQ9.0.8.24199.exe  .viminfo
+
+```
+
+## 文本编辑命令
+
+### cat
+
+cat命令用于查看纯文本文件（内容较少的），格式为“cat [选项] [文件]”。
+
+```shell
+[root@localhost ~]# echo "helloworld" > hello.txt
+[root@localhost ~]# cat hello.txt
+helloworld
+```
+
+### more
+
+more命令用于查看纯文本文件（内容较多的），格式为“more [选项]文件”。
+
+用法和cat一样，空格翻页，回车换行，q退出
+
