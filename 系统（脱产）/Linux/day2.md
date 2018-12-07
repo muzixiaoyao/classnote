@@ -7,16 +7,16 @@
 echo命令用于在终端输出字符串或变量提取后的值，格式为“echo [字符串 | $变量]”。  
 
 ```shell
-[root@localhost ~]# echo "hello eagle"
+# echo "hello eagle"
 hello eagle
-[root@localhost ~]# echo hello eagle
+# echo hello eagle
 hello eagle
 输出环境变量SHELL的值
-[root@localhost ~]# echo $SHELL
+# echo $SHELL
 /bin/bash
-[root@localhost ~]# i=10
+# i=10
 输出自定义变量i的值
-[root@localhost ~]# echo $i
+# echo $i
 10
 ```
 
@@ -25,10 +25,10 @@ hello eagle
 date命令用户显示和设置系统日期或者格式  
 
 ```shell
-[root@localhost ~]# date
+# date
 2018年 12月 04日 星期二 09:46:39 CST
 按照“年-月-日 小时:分钟:秒”的格式查看当前系统时间的date命令：
-[root@localhost ~]# date "+%Y-%m-%d %H:%M:%S"
+# date "+%Y-%m-%d %H:%M:%S"
 将系统的当前时间设置为1996年10月1日1点1分的date命令：
 [root@localhost ~]# date -s "19961001 1:01:00"
 2018-12-04 09:48:46
@@ -57,10 +57,10 @@ wget命令用于在终端中下载网络文件，格式为“wget [参数] 下�
 
 ```shell
 将文件下载到当前目录下  
-[root@localhost ~]# wget https://dldir1.qq.com/qqfile/qq/QQ9.0.8/24199/QQ9.0.8.24199.exe  
+# wget https://dldir1.qq.com/qqfile/qq/QQ9.0.8/24199/QQ9.0.8.24199.exe  
 将文件下载到指定目录并且指定文件名  
 例如将QQ下载到/tmp目录下并且重命名为QQ.exe  
-[root@localhost ~]# wget   https://dldir1.qq.com/qqfile/qq/QQ9.0.8/24199/QQ9.0.8.24199.exe -O /tmp/QQ.exe  
+# wget   https://dldir1.qq.com/qqfile/qq/QQ9.0.8/24199/QQ9.0.8.24199.exe -O /tmp/QQ.exe  
 ```
 
 ### ps
@@ -99,7 +99,7 @@ pidof命令用于查询某个指定服务进程的PID值，格式为“pidof [�
 每个进程的进程号码值（PID）是唯一的，因此可以通过PID来区分不同的进程。例如，可以使用如下命令来查询本机上sshd服务程序的PID：  
 
 ```shell
-[root@localhost ~]# pidof sshd
+# pidof sshd
 12170 12169
 ```
 
@@ -124,7 +124,7 @@ killall命令用于终止某个指定名称的服务所对应的全部进程，�
 
 ```shell
 最小化安装的centos中默认没有这个组件，要手动安装
-[root@localhost ~]# yum install psmisc
+# yum install psmisc
 杀死sshd
 [root@localhost ~]# killall sshd
 ```
@@ -138,9 +138,9 @@ ifconfig命令用于获取网卡配置与网络状态等信息，格式为“ifc
 ```shell
 不加任何参数默认输出所有网卡的状态信息  
 查看指定网卡信息，将网卡设备名作用参书写在后面
-[root@localhost ~]# ifconfig ens33
+# ifconfig ens33
 ifconfig命令还可以用来临时修改网卡的ip地址
-[root@localhost ~]# ifconfig ens33 192.168.225.101 netmask 255.255.255.0
+# ifconfig ens33 192.168.225.101 netmask 255.255.255.0
 ```
 
 ### uname
@@ -148,7 +148,7 @@ ifconfig命令还可以用来临时修改网卡的ip地址
 uname命令用于查看系统内核与系统版本等信息，格式为“uname [-a]”。  
 
 ```shell
-[root@localhost ~]# uname -a
+# uname -a
 Linux localhost.localdomain 3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux
 ```
 
@@ -157,7 +157,7 @@ Linux localhost.localdomain 3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC
 free用于显示当前系统中内存的使用量信息，格式为“free [-h]”。  
 
 ```shell
-[root@localhost ~]# free -h
+# free -h
               total        used        free      shared  buff/cache   available
 Mem:           1.8G        118M        1.1G        8.7M        611M        1.5G
 Swap:          1.0G          0B        1.0G
@@ -168,10 +168,10 @@ Swap:          1.0G          0B        1.0G
 who用于查看当前登入主机的用户终端信息，格式为“who [参数]”。  
 
 ```shell
-[root@localhost ~]# who
+# who
 root     tty1         2018-12-04 09:15
 root     pts/1        2018-12-04 10:58 (192.168.225.1)
-[root@localhost ~]#  
+#  
 ```
 
 ### last
@@ -179,7 +179,7 @@ root     pts/1        2018-12-04 10:58 (192.168.225.1)
 last命令用于查看所有系统的登录记录，格式为“last [参数]”。  
 
 ```shell
-[root@localhost ~]# last
+# last
 root     pts/1        192.168.225.1    Tue Dec  4 10:58   still logged in   
 root     pts/0        192.168.225.1    Tue Dec  4 10:36 - 11:01  (00:25)    
 root     pts/0        192.168.225.1    Tue Dec  4 10:35 - 10:36  (00:00)    
@@ -213,7 +213,7 @@ wtmp begins Mon Dec  3 10:36:08 2018
 history命令用于显示历史执行过的命令，最多一千条，格式为“history [-c]”。
 
 ```shell
-[root@localhost ~]# history  
+# history  
     1  cd /mnt/
     2  ls
     3  cd /dev
@@ -233,8 +233,8 @@ sosreport命令用于收集系统配置及架构信息并输出诊断文档，�
 
 ```shell
 最小化安装centos中默认没有这个组件，用yum安装
-[root@localhost ~]# yum install sos -y
-[root@localhost ~]# sosreport
+# yum install sos -y
+# sosreport
 注意，敲过这条命令还会提示让你把报告保存到指定位置，如果不指定位置，那默认位置就是/var/tmp/中  
 ```
 
@@ -248,7 +248,7 @@ linux系统目录
 pwd命令用于显示用户当前所处的工作目录，格式为“pwd [选项]”。  
 
 ```shell
-[root@localhost ~]# pwd
+# pwd
 /root
 ```
 
@@ -258,11 +258,11 @@ cd命令用于切换工作路径，格式为“cd [目录名称]”。
 
 ```shell
 回到家目录的两种方法：  
-[root@localhost ~]# cd
-[root@localhost ~]# cd ~
+# cd
+# cd ~
 
 回到切换目录之前的目录  
-[root@localhost ~]# cd -
+# cd -
 ```
 
 在路径中，一个英文句号代表当前目录，两个英文句号代表上级目录
@@ -271,17 +271,17 @@ cd命令用于切换工作路径，格式为“cd [目录名称]”。
 
 ```shell
 进入当前目录
-[root@localhost ~]# cd .
+# cd .
 
 进入上级目录
-[root@localhost ~]# cd ..
+# cd ..
 
 进入上上级目录
-[root@localhost ~]# cd ../..
+# cd ../..
 
 英文句号在切换相对路径中的应用
 从"/usr/share/locale"目录切换到"/usr/local/bin"目录，使用相对路径切换
-[root@localhost ~]# cd /usr/share/locale/
+# cd /usr/share/locale/
 [root@localhost locale]# pwd
 /usr/share/locale
 [root@localhost locale]# cd ../../local/bin/
@@ -298,17 +298,17 @@ ls命令用于显示目录中的文件信息，格式为“ls [选项] [文件] 
 我们通常会使用ls -l查看目录中文件的详细信息，centos默认帮我们设置好了"ls -l"的别名"ll"，我们一般会加上-h的参数自动改变文件大小的单位  
 
 ```shell
-[root@localhost ~]# ls
+# ls
 anaconda-ks.cfg  QQ9.0.8.24199.exe  wget-log
 
-[root@localhost ~]# ll -h
+# ll -h
 总用量 73M
 -rw-------. 1 root root 1.5K 12月  3 10:35 anaconda-ks.cfg
 -rw-r--r--. 1 root root  73M 11月 29 11:16 QQ9.0.8.24199.exe
 -rw-r--r--. 1 root root 111K 12月  4 10:01 wget-log
 
 查看当前目录下的隐藏文件
-[root@localhost ~]# ls -a
+# ls -a
 .   anaconda-ks.cfg  .bash_logout   .bashrc  hello.txt          .tcshrc   wget-log
 ..  .bash_history    .bash_profile  .cshrc   QQ9.0.8.24199.exe  .viminfo
 
@@ -321,8 +321,8 @@ anaconda-ks.cfg  QQ9.0.8.24199.exe  wget-log
 cat命令用于查看纯文本文件（内容较少的），格式为“cat [选项] [文件]”。  
 
 ```shell
-[root@localhost ~]# echo "helloworld" > hello.txt
-[root@localhost ~]# cat hello.txt
+# echo "helloworld" > hello.txt
+# cat hello.txt
 helloworld
 ```
 
@@ -338,7 +338,7 @@ tail命令普通用法和more几乎一样，但加上-f参数可以动态追踪�
 
 ```shell
 动态追踪系统日志消息
-[root@localhost ~]# tailf /var/log/messages
+# tailf /var/log/messages
 ```
 
 ### wc
@@ -347,7 +347,7 @@ wc命令用于统计指定文本的行数、字数、字节数，格式为“wc 
 
 ```shell
 统计当前系统中有多少个用户
-[root@localhost ~]# wc -l /etc/passwd
+# wc -l /etc/passwd
 21 /etc/passwd
 ```
 
@@ -363,7 +363,7 @@ wc的常用参数
 stat命令用于查看文件的具体存储信息和时间等信息，格式为“stat 文件名称”  
 
 ```shell
-[root@localhost ~]# stat anaconda-ks.cfg  
+# stat anaconda-ks.cfg  
   文件："anaconda-ks.cfg"
   大小：1445      	块：8          IO 块：4096   普通文件
 设备：fd00h/64768d	Inode：8409154     硬链接：1
@@ -387,3 +387,162 @@ diff命令用于比较多个文本文件的差异，格式为“diff [参数] �
 
 如果没有输出结果那么两个文件输出内容相同，如果有内容输出那就是两个文件内容有不同的地方
 
+## 文件目录管理命令
+
+### touch命令
+
+touch命令用于创建空白文件或设置文件的时间，格式为“touch [选项] [文件]”  
+
+### mkdir
+
+mkdir命令用于创建空白的目录，格式为“mkdir [选项] 目录”  
+
+```shell
+[root@localhost ~]# mkdir dir
+[root@localhost ~]# cd dir
+[root@localhost dir]# mkdir -p a/b/c/d/e
+[root@localhost dir]# cd a
+[root@localhost a]# cd b
+[root@localhost b]#  
+```
+
+### cp
+
+cp命令用于复制文件或目录，格式为“cp [选项] 源文件 目标文件”  
+
+复制操作具体分为3种情况：  
+   如果目标文件是目录，则会把源文件复制到该目录中；  
+   如果目标文件也是普通文件，则会询问是否要覆盖它；  
+   如果目标文件不存在，则执行正常的复制操作。  
+
+参数|作用  
+--|--  
+-p|保留原始文件的属性  
+-d|若对象为“链接文件”，则保留该“链接文件”的属性  
+-r|递归持续复制（用于目录）  
+-i|若目标文件存在则询问是否覆盖  
+-a|相当于-pdr（p、d、r为上述参数）  
+
+我们一般情况下用的最多的是-a参数  
+
+### mv
+
+mv命令用于剪切文件或将文件重命名，格式为“mv [选项] 源文件 [目标路径|目标文件名]”  
+
+剪切操作不同于复制操作，因为它会默认把源文件删除掉，只保留剪切后的文件。如果在同一个目录中对一个文件进行剪切操作，其实也就是对其进行重命名  
+
+```shell
+将当前目录下的123文件移动到/var/目录下
+# mv 123 /var/
+将当前目录下test文件移动到/tmp目录下并且重命名为testabc
+# mv test /tmp/testabc
+```
+
+### rm
+
+rm命令用于删除文件或目录，格式为“rm [选项] 文件”
+
+在Linux系统中删除文件时，系统会默认向您询问是否要执行删除操作，如果不想总是看到这种反复的确认信息，可在rm命令后跟上-f参数来强制删除。另外，想要删除一个目录，需要在rm命令后面一个-r参数才可以，否则删除不掉。
+
+### dd
+
+dd命令用于按照指定大小和个数的数据块来复制文件或转换文件，格式为“dd [参数]”  
+
+```shell
+从/dev/zero设备文件中取出一个大小为128MB的数据块
+# dd if=/dev/zero of=128_file count=1 bs=128M
+记录了1+0 的读入
+记录了1+0 的写出
+134217728字节(134 MB)已复制，1.04283 秒，129 MB/秒
+ 将cdrom中的光盘文件制作为iso镜像
+# dd if=/dev/cdrom of=Windows-XP.iso
+记录了442752+0 的读入
+记录了442752+0 的写出
+226689024字节(227 MB)已复制，4.39047 秒，51.6 MB/秒
+```
+
+### file
+
+file命令用于查看文件的类型，格式为“file 文件名”  
+
+```shell
+# file /dev/sda
+/dev/sda: block special
+# file .bashrc
+.bashrc: ASCII text
+```
+
+## 打包压缩与搜索命令
+
+### tar
+
+tar命令用于对文件进行打包压缩或解压，格式为“tar [选项] [文件]”
+
+打包文件  
+
+```shell
+# tar -czvf home.tar.gz root/
+```
+
+解包文件  
+
+```shell
+# tar -xzvf home.tar.gz
+```
+
+### grep命令
+
+grep命令用于在文本中执行关键词搜索，并显示匹配的结果，格式为“grep [选项] [文件]”  
+
+查看系统中所有不允许交互式登录的用户  
+
+```shell
+# grep /sbin/nologin /etc/passwd
+```
+
+查看配置文件中所有未注释的行  
+
+```shell
+# cat /etc/selinux/config | grep -v "^#" | grep -v "^$"
+SELINUX=enforcing
+SELINUXTYPE=targeted
+```
+
+### find
+
+find命令用于按照指定条件来查找文件，格式为“find [查找路径] 寻找条件 操作”  
+
+查找/dev下所有sd开头的文件  
+
+```shell
+[root@localhost ~]# find /dev -name "sd*" -print
+/dev/sda2
+/dev/sda1
+/dev/sda
+```
+
+查找系统中所有yum软件仓库的仓库配置文件  
+
+```shell
+[root@localhost ~]# find / -name *.repo
+/etc/yum.repos.d/CentOS-Base.repo
+/etc/yum.repos.d/CentOS-CR.repo
+/etc/yum.repos.d/CentOS-Debuginfo.repo
+/etc/yum.repos.d/CentOS-Media.repo
+/etc/yum.repos.d/CentOS-Sources.repo
+/etc/yum.repos.d/CentOS-Vault.repo
+/etc/yum.repos.d/CentOS-fasttrack.repo
+```
+
+查找所有admin用户拥有的文件  
+
+```shell
+[root@localhost ~]# find / -user admin 
+/var/spool/mail/admin
+/home/admin
+/home/admin/.bash_logout
+/home/admin/.bash_profile
+/home/admin/.bashrc
+/home/admin/123
+/home/admin/.bash_history
+```
