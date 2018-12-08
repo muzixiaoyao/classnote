@@ -79,3 +79,19 @@
 
 ce和pe成为ebgp邻居，ce将ipv4路由给pe路由器，pe路由器的vrf接收到ce来的路由后为这些路由加上rd值成为vpnv4的前缀，在离开vrf的时候会被mp-bgp的扩展属性加上rt值，rt是被遗弃传递的。
 所有的p路由器需要运行mpls帮助传递来自于pe路由器的vpnv4前缀，当vpnv4到达mpbgp对等体的pe路由后，会检查rt值，是否是这台pe中某个vrf的，如果pe路有某个vrf中import rt值与pe路由器接收到的vpnv4的rt值相同，那么则将此vpnv4前缀的rt值丢弃且将此vpnv4的路由变为ipv4转入到此vrf中，然后再通过vrf中的路由表将路由传递给ce。
+
+## mpls vpn中的一些配置
+
+配置好ISP中的IGP路由和mpls后，设置PE路由器上的VRF
+
+PE2
+
+```route
+(config)#ip vrf cisco
+(config-vrf)#rd 100:1
+(config-vrf)#route-target export 234:2
+(config-vrf)#route-target import 234:4
+(config-vrf)#exit
+(config)#int e0/0
+R2-PE1(config-if)#ip vrf forwarding cisco
+```
