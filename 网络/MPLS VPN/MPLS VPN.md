@@ -72,4 +72,10 @@
 
 * rt
   * 路由标签，用来区分vpn 客户的，是mp-bgp中的community的扩展属性。跟在vpnv4后面进行遗弃传递。一条路由可以附加多个rt值
-  * 
+  * export rts：通过在vrf中设置rt值，将使得输出的vpnv4路由携带上该rt值一起传递
+  * import rts：PE路由器会从其他mp-bgp对等体的PE收到VPNv4的路由，这些前缀都是带有rt值的，默认情况下，路由器不会将vpnv4路由以ipv4的形式直接转存到vrf表里，除非在本地vrf中配置import rts值，如果某个vrf中import rts与收到的vpnv4前缀携带的rt相等的话，会将此条目以ipv4的形式转载到相应vrf的路由表中。
+
+## mpls vpn 运行的过程
+
+ce和pe成为ebgp邻居，ce将ipv4路由给pe路由器，pe路由器的vrf接收到ce来的路由后为这些路由加上rd值成为vpnv4的前缀，在离开vrf的时候会被mp-bgp的扩展属性加上rt值，rt是被遗弃传递的。
+所有的p路由器需要运行mpls帮助传递来自于pe路由器的vpnv4前缀，当vpnv4到达mpbgp对等体的pe路由后，会检查rt值，是否是这台pe中某个vrf的，如果pe路有某个vrf中import rt值与pe路由器接收到的vpnv4的rt值相同，那么则将此vpnv4前缀的rt值丢弃且将此vpnv4的路由变为ipv4转入到此vrf中，然后再通过vrf中的路由表将路由传递给ce。
