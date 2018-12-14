@@ -1,0 +1,254 @@
+Linux防火墙
+
+一、防火墙概述
+    1.防火墙概念
+    防火墙是架设在不同信任级别的计算机网络间的一种检测和控制设备。它是一个控制和检测的阻流点（Chock Point），不同级别网络间的所有数据都必须经过检查，实现边界防护，根据其配置的安全策略和规则允许、拒绝或代理数据的通过，必要时，可以同时提供VPN和NAT功能。
+    2.防火墙的功能
+        （1）提供边界防护功能
+        · 内外网之间的所有网络数据都必须经过防火墙
+        · 控制内外网之间网络系统的访问
+        · 提高内部网络的保密性和私有性
+        （2）提供网络服务的访问限制功能
+        · 只有符合安全策略的数据流才能通过防火墙，保护易受攻击的服务
+        （3）提供审计和监控功能
+        · 记录网络的使用状态，实现对异常行为的报警
+        · 集中管理内网的安全性，降低管理成本
+        （4）防火墙自身应该具备很强的抗攻击免疫力
+    3.防火墙的局限性
+        （1）不能保护绕过防火墙的攻击
+        · 非授权的网络链接
+        · 执行CD/DVD/USB等介质上的恶意软件
+        （2）不能保护被防火墙信任的攻击
+        ·被防火墙信任的用户/组织攻击
+        ·被防火墙信任的服务（ssl/ssh）的攻击
+        （3）不能防止内部威胁，比如公司内部员工的攻击
+        （4）不能防止所有病毒感染的程序或者文件的传输。
+    4.防火墙的类型
+        （1）按照专业设备划分，防火墙可以分为两类：
+        ·硬件防火墙：专用的硬件或软硬件结合的实现
+        ·软件防火墙：基于普通PC或Server硬件上的通用操作系统加防火墙软件的实现。
+        （2）按照网络模型层次划分，防火墙可以分为两类：
+        ·网络层包过滤防火墙
+        ·应用层网关/代理
+
+二、Linux防火墙
+    1.Linux防火墙的组成
+        Linux防火墙由内核空间的Netfilter框架以及内核模块和用户空间用于操作Netfilter的一系列管理工具两部分组成的。
+        内核空间的Netfileter与用户空间的工具：（功能）
+        检查以太网帧（ebtables）
+            ebtables.ko
+            ebt_*.ko
+        检查IPv4数据包(iptables)
+            ip_tables.ko
+            nf_conntrack_ipv4.ko
+            nf_nat_ipv4.ko
+        检查IPv6数据包(ip6tables)
+            ip6_tables.ko
+            nf_conntrack_ipv6.ko
+            nf_nat_ipv6.ko
+        连接跟踪(conntrack)
+            nf_conntrack.ko
+        网络地址转换(conntrack)
+            nf_nat.ko
+
+    /lib/modules/$(uname -r)/kernel/net/bridge/netfilter
+    /lib/modules/$(uname -r)/kernel/net/ipv{4,6}/netfilter
+    /lib/modules/$(uname -r)/kernel/net/netfilter
+
+三、CentOS下的防火墙
+    yum groupinstall "GNOME 桌面" -y
+    用init 5进入图形界面
+
+    1.CentOS7下的防火墙
+        在Linux系统中，配置防火墙的核心任务就是配置防火墙规则。配置防火墙规则的基础工具是使用iptables命令，使用iptables可以向Netfilter在内核中锁维护的表和链中追加、插入或删除规则。它还可以用于清除规则、设置链策略。实际上真正执行规则的是Netfilter以及其相关模块。
+
+        iptables的命令规则比较复杂，所以在CentOS 7开始提供了两套基于iptables的前端配置工具以及与之协同的服务或守护进程使得配置持久化。
+
+        CentOS 7 提供了动态防火墙配置系统：
+            ·firewalld守护进程
+            ·图形界面配置工具firewall-config 和命令行界面配置工具 firewall-cmd
+        为了兼容低版本，CentOS仍然支持静态防火墙配置系统：
+            ·iptables服务
+            ·图形界面配置工具system-config-firewall和命令行界面配置工具lokkit
+        
+        firewalld和iptables两种防火墙系统是互斥的
+
+    2.CentOS7 中iptables服务与firewalld守护进程比较
+
+        firewalld守护进程：
+            配置文件：
+                /etc/firewalld/firewalld.config
+            防火墙规则配置文件： 
+                /etc/firewalld/*.xml 优先于 /usr/lib/firewalld/*.xml
+            工作方式：
+                对防火墙规则的每个改变不会重新生成所有规则，仅仅应用有差异的规则。
+                使用firewall-cmd更改防火墙规则不会丢失已存在的连接。
+
+        iptables服务：
+            配置文件：
+                /etc/sysconfig/iptables-config
+            防火墙规则配置文件：
+                /etc/sysconfig/iptables
+            工作方式：
+                对发那个获取的每个改变都会清除所有的旧的规则，然后从/etc/sysconfig/iptables 读取所有新规则
+                使用lokkit更改防火墙规则会丢失已存在的连接
+
+    3.firewalld守护进程与firewall-cmd
+        1.firewalld 简介
+        firewalld 是一个可以配置和监控系统的防火墙规则的守护进程。它涵盖了iptables、ip6tables和ebtables的设置。
+        firewalld最大的特点是它实现了动态防火墙功能，与守护进程交互的管理程序可以通过DBus消息系统与firewalld通信，以请求打开网络端口从而动态的管理防火墙规则。
+        firewalld 使用XML文件存储防火墙规则，使防火墙规则配置支持持久化，指的是每次重启系统时都可以重新加载这些防火墙。
+
+        如果系统未安装firewalld防火墙：
+        yum install firewalld -y
+        systemctl start firewalld
+        systemctl enable firewalld
+
+        2.firewalld区域
+        firewalld将所有网络流量分为多个区域，从而简化了防火墙的管理。根据数据包的源IP或者传入网络的接口等条件，流量将转入相应区域的防火墙规则。
+        对于流入系统的每个数据包，将会首先检查数据包的源地址。
+            ·若此源地址关联到特定的区域，则会执行该区域的规则
+            ·若此源地址未关联到某区域，则使用传入网络接口的区域并执行区域规则。
+            ·若网络接口未与某区域关联，则使用默认区域并执行区域规则
+
+        区域：
+        trusted：
+            允许所有流量传入
+        public：
+            除非与传出流量相关或者与ssh、dhcpv6-client预定义的服务匹配，否则拒绝传入流量。此区域为网络接口的默认区域
+        work：
+            除非与传出流量相关或者与ssh、ipp-client、dhcpv6-client预定义的服务匹配，否则拒绝传入流量。此区域为网络接口的默认区域
+        home：
+            除非与传出流量相关或者与ssh、mdns、ipp-client、dhcpv6-client、samba-client预定义服务匹配，否则拒绝传入流量
+        internel：
+            初始状态与home相同
+        external：
+            除非与传出流量相关或者与ssh预定义服务匹配，否则拒绝传入流量。通过此区域转发的IPv4传出流量将进行伪装，使其看起来像传出网络接口的IPv4地址而不是主机的源IP
+        dmz：
+           除非与传出流量相关或者与ssh预定义服务匹配，否则拒绝传入流量
+        block：
+            除非与传出流量相关，否则拒绝所有传入流量。
+        drop：
+            除非与传出流量相关，否则拒绝所有传入流量（不产生包含ICMP的错误响应）
+
+            配置firewalld防火墙的三种方法：
+            ·使用图形工具firwalld-config
+            ·使用命令行工具firewalld-cmd
+            ·直接编辑/etc/firewalld目录中的配置文件
+
+    4.firewalld-cmd命令：
+        systemctl status firewalld | grep 'Active:'
+        firewall-cmd --status
+        在防火墙运行的情况下，可以使用firewall-cmd配置防火墙
+    
+        获取预定义信息
+            --get-zone          显示预定义区域
+            --get-service       显示预定义的服务
+            --get-icmptypes     显示预定义的ICMP阻塞类型
+
+        区域管理
+            --get-default-zone                               显示网络链接或接口的默认区域
+            --set-default-zone=<zone>                        设置默认区域
+            --get-active-zpnes                               显示已经激活的区域
+            --get-zone-of-interface=<interface>              显示指定接口绑定的区域
+            --zone=<zone> -add-interface=<interface>         为指定区域绑定网络接口
+            --zone=<zone> -change-interface=<interface>      为指定区域更改绑定的网络接口
+            --zone=<zone> -remove-interface=<interface>      为指定区域解除绑定的网络接口
+            --list-all-zones                                 显示所有区域以及规则
+            [--zone=<zone>] --list-all                       显示指定区域的规则，如果省略前面的参数则显示默认区域规则
+
+        
+        管理区域中的服务
+             [--zone=<zone>] --list-service
+                显示指定区域允许访问的所有服务
+             [--zone=<zone>] --add-service=<service>
+                为指定区域添加允许访问的某个服务
+             [--zone=<zone>] --remove-service=<service>
+                 为指定区域移除某个允许访问的服务
+
+            [--zone=<zone>] --list-ports
+                显示指定区域中允许访问的所有端口号
+            [--zone=<zone>] --add-port=<portid>[-<portid>]/<protocal>
+                添加指定区域允许访问的端口号
+            [--zone=<zone>] --remove-port=<portid>[-<portid>]/<protocal>
+                移除指定区域允许访问的端口号
+
+            [--zone=<zone>] --list-icmp-block
+                显示指定区域拒绝访问的所有icmp的类型
+            [--zone=<zone>] --add-icmp-block=<icmptype>
+                为指定区域设置拒绝访问的某项icmp类型
+            
+            省略 [--zone=<zone>]时就是对默认区域进行操作
+
+    5.IP伪装与端口转发
+        firewalld支持SNAT和DNAT配置。可是使用firewalld方便地配置IP伪装（SNAT）和端口转发（DNAT）
+            [--zone=<zone>] --list-forward-ports
+                显示指定区域内设置的IPv4端口转发
+            [--zone=<zone>] --add-forward-port=<portid>[-<portid>]add-forward-port=port=<portid>[-<portid>]:proto=<protocol> /
+             [:toport=<portid>[-<portid>]] [:toaddr=<address>[/<mask>]]
+                为指定区域设置IPv4端口转发
+            [--zone=<zone>] --remove-forward-port=<portid>[-<portid>]:proto=<protocol> [toport=<portid>[-<portid>]][:toaddr=<address> /
+            [/<mask>]]
+                 移除指定区域已设置的IPv4端口转发
+            [--zone=<zone>] -query-masquerade
+                查看指定区域是否启用了IP伪装
+            [--zone=<zone>] --add-masquerade
+                为指定区域启用IP伪装
+            [--zone=<zone>] --remove-masquerade
+                禁用指定区域IP伪装
+
+    6.两种配置模式
+        运行时模式（Runtime mode）：
+            表示当前内存中运行的防火墙配置
+        持久性配置（Permanent mode）：
+            表示重启防火墙或重新加载防火墙规则时的配置
+
+            与配置模式相关的命令
+                --reload
+                    重载发那个获取规则并保持状态信息，即将持久配置应用为运行时配置
+                --permanent
+                    带有这个选项的命令用于设置持久化配置，这些规则只有重新启动firewalld或者重载防火墙规则之后才会生效，不带这个参数的话，则为运行时配置
+                --runtime-to-permanent
+                    将当前的运行配置写入规则配置文件并使之成为持久性配置
+    
+    7.高级配置
+        firewall-cmd支持两种高级配置方法：
+        （1）使用复杂规则（Rich Rule）
+        使用--add-rich-rule='rule'选项指定复杂规则，其中的rule需要使用特定的语法：
+            //添加一条复杂规则允许源100.10.0.0/16网络访问本机的MySQL服务
+            # firewall-cmd --add-rich-rule='rule family="ipv4" source address="100.10.0.0/16" service name="mysql" accept'
+            //显示复杂规则
+            # firewall-cmd --list-rich-rule
+            //删除复杂规则
+            # firewall-cmd --remove-rich-rule='rule family="ipv4" source address="100.10.0.0/16" service name="mysql" accept'、
+
+            复杂规则手册 man 5 firewalld.richlanguage
+
+        (2)直接使用接口（Direct Interface）
+        firewalld 提供了直接几口，使用firewall—cmd命令的--direct 选项可以直接使用iptables、ip6tables和ebtables的命令语法：
+        //在filter表的IN_public_allow链首插入一条规则运渠访问本机的666端口
+            # firewall-cmd --direct --add-rule ipv4 filter IN_public_allow 0 -m tcp -p tcp --dport 666 -j ACCEPT
+        //显示fitler表IN_public_allow的链规则
+            # firewall-cmd --direct --get-rules ipv4 filter IN_public_allow
+        //删除fitler表IN_public_allow已定义的链规则
+            # firewall-cmd --direct --remove-rule ipv4 filter IN_public_allow 0 -m tcp -p tcp --dport 666 -j ACCEPT
+
+    8.使用恐慌模式
+        当服务器遭到严重的网络攻击时，可以使用Panic模式，进入此莫时候，会丢弃所有的入站和出站流量并丢弃已建立连接的数据包。
+        //开启恐慌模式
+        # firewall-cmd --panic-on
+        //关闭恐慌模式
+        # firewall-cmd --panic-off
+
+        //查看恐慌模式状态
+        # firewall-cmd --query-panic
+
+
+思考：
+    什么是防火墙？防火墙的种类以及各自的特点如何？
+    什么是Netfilter？
+    比较CentOS提供firewalld守护进程和iptables服务，如何切换。
+实验：
+    学会使用firewall-cmd配置和管理firewalld防火墙
+    学会使用firewalld-cmd的高级规则
+    
