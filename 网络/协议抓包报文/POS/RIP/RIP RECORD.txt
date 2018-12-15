@@ -1,0 +1,3 @@
+RIPng over POS在收到路由的统计项里看不到，同时enable view routes后也看不到路由;
+RIP没有这个问题；RIPng OVER ETHERNET没有这个问题
+RIPV2在任何物理层链路上都没有这个问题

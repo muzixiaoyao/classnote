@@ -1,0 +1,432 @@
+
+Time: 096:24:12.65474984
+Transmit SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Transmit SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Transmit SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Transmit SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Transmit SONET-IP>        LCP identifier               = 01h [1d]   
+Transmit SONET-IP>        LCP length                   = 000Ah [10d]   
+Transmit SONET-IP>          Option type                = 05h [5d]  Magic Number
+Transmit SONET-IP>          Option length              = 06h [6d]   
+Transmit SONET-IP>            Magic Number             = 00002708h [9992d]   
+Transmit SONET-IP>      FCS-32                         = 280B1513h
+
+Time: 096:24:15.66556875
+Transmit SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Transmit SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Transmit SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Transmit SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Transmit SONET-IP>        LCP identifier               = 01h [1d]   
+Transmit SONET-IP>        LCP length                   = 000Ah [10d]   
+Transmit SONET-IP>          Option type                = 05h [5d]  Magic Number
+Transmit SONET-IP>          Option length              = 06h [6d]   
+Transmit SONET-IP>            Magic Number             = 00002708h [9992d]   
+Transmit SONET-IP>      FCS-32                         = 280B1513h
+
+Time: 096:24:18.67475292
+Transmit SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Transmit SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Transmit SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Transmit SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Transmit SONET-IP>        LCP identifier               = 01h [1d]   
+Transmit SONET-IP>        LCP length                   = 000Ah [10d]   
+Transmit SONET-IP>          Option type                = 05h [5d]  Magic Number
+Transmit SONET-IP>          Option length              = 06h [6d]   
+Transmit SONET-IP>            Magic Number             = 00002708h [9992d]   
+Transmit SONET-IP>      FCS-32                         = 280B1513h
+
+Time: 096:24:21.68442092
+Transmit SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Transmit SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Transmit SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Transmit SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Transmit SONET-IP>        LCP identifier               = 01h [1d]   
+Transmit SONET-IP>        LCP length                   = 000Ah [10d]   
+Transmit SONET-IP>          Option type                = 05h [5d]  Magic Number
+Transmit SONET-IP>          Option length              = 06h [6d]   
+Transmit SONET-IP>            Magic Number             = 00002708h [9992d]   
+Transmit SONET-IP>      FCS-32                         = 280B1513h
+
+Time: 096:24:24.69312092
+Transmit SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Transmit SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Transmit SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Transmit SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Transmit SONET-IP>        LCP identifier               = 01h [1d]   
+Transmit SONET-IP>        LCP length                   = 000Ah [10d]   
+Transmit SONET-IP>          Option type                = 05h [5d]  Magic Number
+Transmit SONET-IP>          Option length              = 06h [6d]   
+Transmit SONET-IP>            Magic Number             = 00002708h [9992d]   
+Transmit SONET-IP>      FCS-32                         = 280B1513h
+
+Time: 096:24:27.70180850
+Transmit SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Transmit SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Transmit SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Transmit SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Transmit SONET-IP>        LCP identifier               = 01h [1d]   
+Transmit SONET-IP>        LCP length                   = 000Ah [10d]   
+Transmit SONET-IP>          Option type                = 05h [5d]  Magic Number
+Transmit SONET-IP>          Option length              = 06h [6d]   
+Transmit SONET-IP>            Magic Number             = 00002708h [9992d]   
+Transmit SONET-IP>      FCS-32                         = 280B1513h
+
+Time: 096:24:30.71149650
+Transmit SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Transmit SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Transmit SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Transmit SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Transmit SONET-IP>        LCP identifier               = 01h [1d]   
+Transmit SONET-IP>        LCP length                   = 000Ah [10d]   
+Transmit SONET-IP>          Option type                = 05h [5d]  Magic Number
+Transmit SONET-IP>          Option length              = 06h [6d]   
+Transmit SONET-IP>            Magic Number             = 00002708h [9992d]   
+Transmit SONET-IP>      FCS-32                         = 280B1513h
+
+Time: 096:24:33.72017692
+Transmit SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Transmit SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Transmit SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Transmit SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Transmit SONET-IP>        LCP identifier               = 01h [1d]   
+Transmit SONET-IP>        LCP length                   = 000Ah [10d]   
+Transmit SONET-IP>          Option type                = 05h [5d]  Magic Number
+Transmit SONET-IP>          Option length              = 06h [6d]   
+Transmit SONET-IP>            Magic Number             = 00002708h [9992d]   
+Transmit SONET-IP>      FCS-32                         = 280B1513h
+
+Time: 096:24:36.72886050
+Transmit SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Transmit SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Transmit SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Transmit SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Transmit SONET-IP>        LCP identifier               = 01h [1d]   
+Transmit SONET-IP>        LCP length                   = 000Ah [10d]   
+Transmit SONET-IP>          Option type                = 05h [5d]  Magic Number
+Transmit SONET-IP>          Option length              = 06h [6d]   
+Transmit SONET-IP>            Magic Number             = 00002708h [9992d]   
+Transmit SONET-IP>      FCS-32                         = 280B1513h
+
+Time: 096:24:39.73805025
+Transmit SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Transmit SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Transmit SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Transmit SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Transmit SONET-IP>        LCP identifier               = 01h [1d]   
+Transmit SONET-IP>        LCP length                   = 000Ah [10d]   
+Transmit SONET-IP>          Option type                = 05h [5d]  Magic Number
+Transmit SONET-IP>          Option length              = 06h [6d]   
+Transmit SONET-IP>            Magic Number             = 00002708h [9992d]   
+Transmit SONET-IP>      FCS-32                         = 280B1513h
+
+Time: 096:25:17.42435075
+Receive SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Receive SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Receive SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Receive SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Receive SONET-IP>        LCP identifier               = 01h [1d]   
+Receive SONET-IP>        LCP length                   = 000Ah [10d]   
+Receive SONET-IP>          Option type                = 05h [5d]  Magic Number
+Receive SONET-IP>          Option length              = 06h [6d]   
+Receive SONET-IP>            Magic Number             = 00000BD8h [3032d]   
+Receive SONET-IP>      FCS-32                         = 52B2F7ACh
+
+Time: 096:25:20.43290600
+Receive SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Receive SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Receive SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Receive SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Receive SONET-IP>        LCP identifier               = 01h [1d]   
+Receive SONET-IP>        LCP length                   = 000Ah [10d]   
+Receive SONET-IP>          Option type                = 05h [5d]  Magic Number
+Receive SONET-IP>          Option length              = 06h [6d]   
+Receive SONET-IP>            Magic Number             = 00000BD8h [3032d]   
+Receive SONET-IP>      FCS-32                         = 52B2F7ACh
+
+Time: 096:25:23.44161850
+Receive SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Receive SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Receive SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Receive SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Receive SONET-IP>        LCP identifier               = 01h [1d]   
+Receive SONET-IP>        LCP length                   = 000Ah [10d]   
+Receive SONET-IP>          Option type                = 05h [5d]  Magic Number
+Receive SONET-IP>          Option length              = 06h [6d]   
+Receive SONET-IP>            Magic Number             = 00000BD8h [3032d]   
+Receive SONET-IP>      FCS-32                         = 52B2F7ACh
+
+Time: 096:25:26.45033383
+Receive SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Receive SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Receive SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Receive SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Receive SONET-IP>        LCP identifier               = 01h [1d]   
+Receive SONET-IP>        LCP length                   = 000Ah [10d]   
+Receive SONET-IP>          Option type                = 05h [5d]  Magic Number
+Receive SONET-IP>          Option length              = 06h [6d]   
+Receive SONET-IP>            Magic Number             = 00000BD8h [3032d]   
+Receive SONET-IP>      FCS-32                         = 52B2F7ACh
+
+Time: 096:25:29.45907708
+Receive SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Receive SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Receive SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Receive SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Receive SONET-IP>        LCP identifier               = 01h [1d]   
+Receive SONET-IP>        LCP length                   = 000Ah [10d]   
+Receive SONET-IP>          Option type                = 05h [5d]  Magic Number
+Receive SONET-IP>          Option length              = 06h [6d]   
+Receive SONET-IP>            Magic Number             = 00000BD8h [3032d]   
+Receive SONET-IP>      FCS-32                         = 52B2F7ACh
+
+Time: 096:25:32.46779125
+Receive SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Receive SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Receive SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Receive SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Receive SONET-IP>        LCP identifier               = 01h [1d]   
+Receive SONET-IP>        LCP length                   = 000Ah [10d]   
+Receive SONET-IP>          Option type                = 05h [5d]  Magic Number
+Receive SONET-IP>          Option length              = 06h [6d]   
+Receive SONET-IP>            Magic Number             = 00000BD8h [3032d]   
+Receive SONET-IP>      FCS-32                         = 52B2F7ACh
+
+Time: 096:25:35.47649050
+Receive SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Receive SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Receive SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Receive SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Receive SONET-IP>        LCP identifier               = 01h [1d]   
+Receive SONET-IP>        LCP length                   = 000Ah [10d]   
+Receive SONET-IP>          Option type                = 05h [5d]  Magic Number
+Receive SONET-IP>          Option length              = 06h [6d]   
+Receive SONET-IP>            Magic Number             = 00000BD8h [3032d]   
+Receive SONET-IP>      FCS-32                         = 52B2F7ACh
+
+Time: 096:25:38.48520008
+Receive SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Receive SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Receive SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Receive SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Receive SONET-IP>        LCP identifier               = 01h [1d]   
+Receive SONET-IP>        LCP length                   = 000Ah [10d]   
+Receive SONET-IP>          Option type                = 05h [5d]  Magic Number
+Receive SONET-IP>          Option length              = 06h [6d]   
+Receive SONET-IP>            Magic Number             = 00000BD8h [3032d]   
+Receive SONET-IP>      FCS-32                         = 52B2F7ACh
+
+Time: 096:25:41.49392783
+Receive SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Receive SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Receive SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Receive SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Receive SONET-IP>        LCP identifier               = 01h [1d]   
+Receive SONET-IP>        LCP length                   = 000Ah [10d]   
+Receive SONET-IP>          Option type                = 05h [5d]  Magic Number
+Receive SONET-IP>          Option length              = 06h [6d]   
+Receive SONET-IP>            Magic Number             = 00000BD8h [3032d]   
+Receive SONET-IP>      FCS-32                         = 52B2F7ACh
+
+Time: 096:25:44.50264708
+Receive SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Receive SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Receive SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Receive SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Receive SONET-IP>        LCP identifier               = 01h [1d]   
+Receive SONET-IP>        LCP length                   = 000Ah [10d]   
+Receive SONET-IP>          Option type                = 05h [5d]  Magic Number
+Receive SONET-IP>          Option length              = 06h [6d]   
+Receive SONET-IP>            Magic Number             = 00000BD8h [3032d]   
+Receive SONET-IP>      FCS-32                         = 52B2F7ACh
+
+Time: 096:26:01.56227792
+Transmit SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Transmit SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Transmit SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Transmit SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Transmit SONET-IP>        LCP identifier               = 01h [1d]   
+Transmit SONET-IP>        LCP length                   = 000Ah [10d]   
+Transmit SONET-IP>          Option type                = 05h [5d]  Magic Number
+Transmit SONET-IP>          Option length              = 06h [6d]   
+Transmit SONET-IP>            Magic Number             = 00000D76h [3446d]   
+Transmit SONET-IP>      FCS-32                         = 3B9BC3CBh
+
+Time: 096:26:04.57197159
+Transmit SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Transmit SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Transmit SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Transmit SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Transmit SONET-IP>        LCP identifier               = 01h [1d]   
+Transmit SONET-IP>        LCP length                   = 000Ah [10d]   
+Transmit SONET-IP>          Option type                = 05h [5d]  Magic Number
+Transmit SONET-IP>          Option length              = 06h [6d]   
+Transmit SONET-IP>            Magic Number             = 00000D76h [3446d]   
+Transmit SONET-IP>      FCS-32                         = 3B9BC3CBh
+
+Time: 096:26:07.58065617
+Transmit SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Transmit SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Transmit SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Transmit SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Transmit SONET-IP>        LCP identifier               = 01h [1d]   
+Transmit SONET-IP>        LCP length                   = 000Ah [10d]   
+Transmit SONET-IP>          Option type                = 05h [5d]  Magic Number
+Transmit SONET-IP>          Option length              = 06h [6d]   
+Transmit SONET-IP>            Magic Number             = 00000D76h [3446d]   
+Transmit SONET-IP>      FCS-32                         = 3B9BC3CBh
+
+Time: 096:26:10.58933767
+Transmit SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Transmit SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Transmit SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Transmit SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Transmit SONET-IP>        LCP identifier               = 01h [1d]   
+Transmit SONET-IP>        LCP length                   = 000Ah [10d]   
+Transmit SONET-IP>          Option type                = 05h [5d]  Magic Number
+Transmit SONET-IP>          Option length              = 06h [6d]   
+Transmit SONET-IP>            Magic Number             = 00000D76h [3446d]   
+Transmit SONET-IP>      FCS-32                         = 3B9BC3CBh
+
+Time: 096:26:13.59802175
+Transmit SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Transmit SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Transmit SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Transmit SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Transmit SONET-IP>        LCP identifier               = 01h [1d]   
+Transmit SONET-IP>        LCP length                   = 000Ah [10d]   
+Transmit SONET-IP>          Option type                = 05h [5d]  Magic Number
+Transmit SONET-IP>          Option length              = 06h [6d]   
+Transmit SONET-IP>            Magic Number             = 00000D76h [3446d]   
+Transmit SONET-IP>      FCS-32                         = 3B9BC3CBh
+
+Time: 096:26:16.60670817
+Transmit SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Transmit SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Transmit SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Transmit SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Transmit SONET-IP>        LCP identifier               = 01h [1d]   
+Transmit SONET-IP>        LCP length                   = 000Ah [10d]   
+Transmit SONET-IP>          Option type                = 05h [5d]  Magic Number
+Transmit SONET-IP>          Option length              = 06h [6d]   
+Transmit SONET-IP>            Magic Number             = 00000D76h [3446d]   
+Transmit SONET-IP>      FCS-32                         = 3B9BC3CBh
+
+Time: 096:26:19.61639717
+Transmit SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Transmit SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Transmit SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Transmit SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Transmit SONET-IP>        LCP identifier               = 01h [1d]   
+Transmit SONET-IP>        LCP length                   = 000Ah [10d]   
+Transmit SONET-IP>          Option type                = 05h [5d]  Magic Number
+Transmit SONET-IP>          Option length              = 06h [6d]   
+Transmit SONET-IP>            Magic Number             = 00000D76h [3446d]   
+Transmit SONET-IP>      FCS-32                         = 3B9BC3CBh
+
+Time: 096:26:22.62508042
+Transmit SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Transmit SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Transmit SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Transmit SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Transmit SONET-IP>        LCP identifier               = 01h [1d]   
+Transmit SONET-IP>        LCP length                   = 000Ah [10d]   
+Transmit SONET-IP>          Option type                = 05h [5d]  Magic Number
+Transmit SONET-IP>          Option length              = 06h [6d]   
+Transmit SONET-IP>            Magic Number             = 00000D76h [3446d]   
+Transmit SONET-IP>      FCS-32                         = 3B9BC3CBh
+
+Time: 096:26:24.37983716
+Receive SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Receive SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Receive SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Receive SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Receive SONET-IP>        LCP identifier               = 01h [1d]   
+Receive SONET-IP>        LCP length                   = 000Ah [10d]   
+Receive SONET-IP>          Option type                = 05h [5d]  Magic Number
+Receive SONET-IP>          Option length              = 06h [6d]   
+Receive SONET-IP>            Magic Number             = 0000534Ch [21324d]   
+Receive SONET-IP>      FCS-32                         = 5332F729h
+
+Time: 096:26:24.40243550
+Transmit SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Transmit SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Transmit SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Transmit SONET-IP>        LCP code                     = 02h [2d]  Configure Ack
+Transmit SONET-IP>        LCP identifier               = 01h [1d]   
+Transmit SONET-IP>        LCP length                   = 000Ah [10d]   
+Transmit SONET-IP>          Option type                = 05h [5d]  Magic Number
+Transmit SONET-IP>          Option length              = 06h [6d]   
+Transmit SONET-IP>            Magic Number             = 0000534Ch [21324d]   
+Transmit SONET-IP>      FCS-32                         = 5089C0C2h
+
+Time: 096:26:25.63430817
+Transmit SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Transmit SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Transmit SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Transmit SONET-IP>        LCP code                     = 01h [1d]  Configure Request
+Transmit SONET-IP>        LCP identifier               = 01h [1d]   
+Transmit SONET-IP>        LCP length                   = 000Ah [10d]   
+Transmit SONET-IP>          Option type                = 05h [5d]  Magic Number
+Transmit SONET-IP>          Option length              = 06h [6d]   
+Transmit SONET-IP>            Magic Number             = 00000D76h [3446d]   
+Transmit SONET-IP>      FCS-32                         = 3B9BC3CBh
+
+Time: 096:26:25.63647291
+Receive SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Receive SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Receive SONET-IP>      PPP Protocol                   = C021h [49185d]  Link Control Protocol (LCP)
+Receive SONET-IP>        LCP code                     = 02h [2d]  Configure Ack
+Receive SONET-IP>        LCP identifier               = 01h [1d]   
+Receive SONET-IP>        LCP length                   = 000Ah [10d]   
+Receive SONET-IP>          Option type                = 05h [5d]  Magic Number
+Receive SONET-IP>          Option length              = 06h [6d]   
+Receive SONET-IP>            Magic Number             = 00000D76h [3446d]   
+Receive SONET-IP>      FCS-32                         = 3820F420h
+
+Time: 096:26:25.63660600
+Receive SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Receive SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Receive SONET-IP>      PPP Protocol                   = 8021h [32801d]  Internet Protocol Control Protocol (IPCP)
+Receive SONET-IP>        IPCP code                    = 01h [1d]  Configure Request
+Receive SONET-IP>        IPCP identifier              = 01h [1d]   
+Receive SONET-IP>        IPCP length                  = 000Ah [10d]   
+Receive SONET-IP>          Option type                = 03h [3d]  IP Address
+Receive SONET-IP>          Option length              = 06h [6d]   
+Receive SONET-IP>            IP Address               = 1.1.1.2
+Receive SONET-IP>      FCS-32                         = AD385A6Fh
+
+Time: 096:26:25.64852959
+Transmit SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Transmit SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Transmit SONET-IP>      PPP Protocol                   = 8021h [32801d]  Internet Protocol Control Protocol (IPCP)
+Transmit SONET-IP>        IPCP code                    = 01h [1d]  Configure Request
+Transmit SONET-IP>        IPCP identifier              = 01h [1d]   
+Transmit SONET-IP>        IPCP length                  = 000Ah [10d]   
+Transmit SONET-IP>          Option type                = 03h [3d]  IP Address
+Transmit SONET-IP>          Option length              = 06h [6d]   
+Transmit SONET-IP>            IP Address               = 1.1.1.1
+Transmit SONET-IP>      FCS-32                         = 176953F6h
+
+Time: 096:26:25.64871450
+Transmit SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Transmit SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Transmit SONET-IP>      PPP Protocol                   = 8021h [32801d]  Internet Protocol Control Protocol (IPCP)
+Transmit SONET-IP>        IPCP code                    = 02h [2d]  Configure Ack
+Transmit SONET-IP>        IPCP identifier              = 01h [1d]   
+Transmit SONET-IP>        IPCP length                  = 000Ah [10d]   
+Transmit SONET-IP>          Option type                = 03h [3d]  IP Address
+Transmit SONET-IP>          Option length              = 06h [6d]   
+Transmit SONET-IP>            IP Address               = 1.1.1.2
+Transmit SONET-IP>      FCS-32                         = AE836D84h
+
+Time: 096:26:25.66150541
+Receive SONET-IP>                    HDLC:   FFh [255d] (All-Stations)
+Receive SONET-IP>                     CTL:   03h [3d] (UI - Unnumbered Information)
+Receive SONET-IP>      PPP Protocol                   = 8021h [32801d]  Internet Protocol Control Protocol (IPCP)
+Receive SONET-IP>        IPCP code                    = 02h [2d]  Configure Ack
+Receive SONET-IP>        IPCP identifier              = 01h [1d]   
+Receive SONET-IP>        IPCP length                  = 000Ah [10d]   
+Receive SONET-IP>          Option type                = 03h [3d]  IP Address
+Receive SONET-IP>          Option length              = 06h [6d]   
+Receive SONET-IP>            IP Address               = 1.1.1.1
+Receive SONET-IP>      FCS-32                         = 14D2641Dh

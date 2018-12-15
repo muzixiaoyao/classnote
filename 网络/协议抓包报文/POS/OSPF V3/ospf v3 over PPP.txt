@@ -1,0 +1,2 @@
+ospfv3 over ppp,不能建立邻居关系；
+ospfv3 over ethnet则没有这个问题

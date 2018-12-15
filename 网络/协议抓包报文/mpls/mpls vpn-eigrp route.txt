@@ -1,0 +1,12 @@
+r1#show ip bgp vpnv4 all 12.1.1.0
+BGP routing table entry for 200:1:12.1.1.0/24, version 6
+Paths: (1 available, best #1, table yeslab)
+Flag: 0x820
+  Advertised to update-groups:
+        1
+  Local
+    0.0.0.0 from 0.0.0.0 (11.1.1.1)
+      Origin incomplete, metric 0, localpref 100, weight 32768, valid, sourced, best
+      Extended Community: SoO:200:18 RT:200:1 Cost:pre-bestpath:128:28160 
+        0x8800:32768:0 0x8801:1:2560 0x8802:65280:25600 0x8803:65281:1500
+      mpls labels in/out 110/nolabel(yeslab)

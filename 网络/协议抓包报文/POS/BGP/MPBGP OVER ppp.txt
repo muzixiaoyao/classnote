@@ -1,0 +1,2 @@
+mpbgp over ppp不能建立在PPP上的IPV6TCP连接;
+mpbgp over ethenet则没有这个问题。
